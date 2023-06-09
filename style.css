@@ -1,0 +1,266 @@
+/* Topo */
+* {
+    margin: 0;
+    font-family: 'Caladea', serif;
+}
+
+.secao-topo {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    color: #d9e5ec;
+    box-shadow: 0 2px 2px rgb(217, 229, 236);
+    transition: 0.6s;
+}
+.sticky {
+    padding: 15px;
+    background-color: rgb(37, 38, 38);
+    color: #fff;
+}
+.secao-topo p, .secao-topo span {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    cursor: default;
+}
+.secao-largura-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.secao-largura-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secao-largura-limitada {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 30px;
+}
+.subtitle {
+    font-size: 1.1rem;
+}
+.contato {
+    text-decoration: none;
+    color: rgb(217, 229, 236);
+}
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+/* Seção inicial com imagem de fundo */
+.secao-background-capa {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 500px;
+    background-image: url('files/img/porsche-capa.jpg');
+    background-size: cover;
+}
+h3 {
+    margin: 0;
+}
+/* Seção conteúdo */
+.secao-conteudo {
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+.img-layout {
+    position: relative;
+    /* display: inline-block; */
+    height: 500px;
+    width: 760px;
+    /* margin: auto; */
+    opacity: 1;
+    transition: 0.5s;
+}
+.img-layout:hover {
+    opacity: 0.8;
+}
+.img-conteudo.displayed {
+    display: block;
+    height: 500px;
+    width: 760px;
+    object-fit: contain;
+    opacity: 1;
+    transition: linear 0.2s;
+
+}
+.bg-expanded {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+.img-expanded {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 95vh;
+    background: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.img-conteudo.expanded {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    object-fit: contain;
+    width: 75vw;
+    height: 95vh;
+    opacity: 1;
+    pointer-events: none;
+}
+.img-conteudo {
+    position: absolute;
+    display: block;
+    height: 500px;
+    width: 760px;
+    object-fit: contain;
+    opacity: 0;
+}
+.botao-right, .botao-left {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    border: outset 1px #8e8e8e;
+    border-radius: 40%;
+    opacity: 0;
+    transition: linear 0.2s;
+}
+.botao-right.showed, .botao-left.showed {
+    opacity: 1;
+    transition-delay: 0s;
+}
+.botao-right:hover, .botao-left:hover {
+    cursor: pointer;
+}
+.botao-left {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+}
+.botao-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e5e5e5;
+}
+.botao-close:hover {
+    background: #cfcfcf;
+}
+/* .img-conteudo:not(:first-of-type) {
+    display: none;
+} */
+.secao-conteudo p {
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+.secao-conteudo span {
+    border-left: 1px solid;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.secao-conteudo h3 {
+    font-size: 1.5rem;
+}
+/* Seção com imagem de fundo e texto */
+/* .secao-background-divisao {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #d92121;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.secao-background-divisao h3 {
+    text-align: center;
+    font-size: 36px;
+    background-color: #757677;
+    width: 100%;
+    margin: 0 auto;
+    color: #fff;
+}
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+}
+.grupo-campo input, .grupo-campo select {
+    margin: 12px 0;
+    height: 25px;
+}
+.secao-conteudo fieldset {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+.secao-conteudo .dados {
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    width: 100%;
+    background:rgb(77, 80, 81);
+    padding: 10px;
+    border: none;
+    color: #fff;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f8f8f8;
+}
+footer p {
+    color: rgb(77, 80, 81);
+    font-family: sans-serif;
+    text-align: center;
+}
+@media(max-width: 815px)
+{
+    .img-conteudo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .secao-largura-titulo .subtitle {
+        display: none;
+    }
+    .img-layout, .img-conteudo, .img-conteudo.displayed {
+        width: 100%;
+    }
+    .botao-right, .botao-left {
+        display: none;
+    }
+}
