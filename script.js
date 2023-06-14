@@ -4,8 +4,8 @@ window.addEventListener("scroll", function() {
 })
 
 if (window.matchMedia("(min-width: 880px)").matches) {
-  const buttonRight = document.querySelector(".botao-right");
   const imgCar = document.querySelectorAll(".img-conteudo");
+  const buttonRight = document.querySelector(".botao-right");
 
   buttonRight.addEventListener("click", function(event) {
     event.stopPropagation();

@@ -254,13 +254,32 @@ footer p {
 }
 
 @media screen and (max-width: 420px) {
+    * {
+        overflow-x: hidden;
+    }
     .secao-largura-titulo .subtitle {
         display: none;
     }
-    .img-layout, .img-conteudo, .img-conteudo.displayed {
-        width: 100%;
-    }
     .botao-right, .botao-left {
         display: none;
+    }
+    #img-layout {
+        display: none;
+    }
+    #currentImage, #nextImage, #lastImage {
+        width: 100vw;
+        transform: translateX(-100vw);
+    }
+    #img-layout-mobile {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .secao-background-capa {
+        background-position: center;
+        min-height: 0;
+        height: 400px;
     }
 }
